@@ -1,0 +1,71 @@
+{
+  "108": {
+    "full_binding": {
+      "top1_accuracy": 0.5217391304347826,
+      "recall_at_6": 0.5217391304347826,
+      "avg_prompt_chars": 412865,
+      "latency_p50_ms": 9.485899936407804,
+      "latency_p95_ms": 13.10589979402721
+    },
+    "dense_only": {
+      "top1_accuracy": 0.5217391304347826,
+      "recall_at_6": 0.8260869565217391,
+      "avg_prompt_chars": 17921.804347826088,
+      "latency_p50_ms": 6.729499902576208,
+      "latency_p95_ms": 10.383500019088387
+    },
+    "hybrid_rerank": {
+      "top1_accuracy": 0.5,
+      "recall_at_6": 0.717391304347826,
+      "avg_prompt_chars": 28809.08695652174,
+      "latency_p50_ms": 2465.800599893555,
+      "latency_p95_ms": 2956.0698000714183
+    }
+  },
+  "250": {
+    "full_binding": {
+      "top1_accuracy": 0.5217391304347826,
+      "recall_at_6": 0.5217391304347826,
+      "avg_prompt_chars": 500485,
+      "latency_p50_ms": 14.172900002449751,
+      "latency_p95_ms": 26.53189981356263
+    },
+    "dense_only": {
+      "top1_accuracy": 0.5217391304347826,
+      "recall_at_6": 0.8260869565217391,
+      "avg_prompt_chars": 17495.282608695652,
+      "latency_p50_ms": 12.886299984529614,
+      "latency_p95_ms": 21.08450001105666
+    },
+    "hybrid_rerank": {
+      "top1_accuracy": 0.5,
+      "recall_at_6": 0.717391304347826,
+      "avg_prompt_chars": 27965.869565217392,
+      "latency_p50_ms": 2782.096399925649,
+      "latency_p95_ms": 3329.9762001261115
+    }
+  },
+  "500": {
+    "full_binding": {
+      "top1_accuracy": 0.5217391304347826,
+      "recall_at_6": 0.5217391304347826,
+      "avg_prompt_chars": 642246,
+      "latency_p50_ms": 17.92030013166368,
+      "latency_p95_ms": 20.389100071042776
+    },
+    "dense_only": {
+      "top1_accuracy": 0.5217391304347826,
+      "recall_at_6": 0.8043478260869565,
+      "avg_prompt_chars": 17042.08695652174,
+      "latency_p50_ms": 17.443600110709667,
+      "latency_p95_ms": 22.904600016772747
+    },
+    "hybrid_rerank": {
+      "top1_accuracy": 0.5,
+      "recall_at_6": 0.6956521739130435,
+      "avg_prompt_chars": 27217.369565217392,
+      "latency_p50_ms": 2429.6930998098105,
+      "latency_p95_ms": 2771.4199000038207
+    }
+  }
+}

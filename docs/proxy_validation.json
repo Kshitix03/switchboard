@@ -1,0 +1,158 @@
+{
+  "n": 15,
+  "proxy_accuracy": 0.4666666666666667,
+  "real_accuracy": 0.7333333333333333,
+  "agreement": 0.6,
+  "results": [
+    {
+      "id": "g001",
+      "query": "how much did we bring in last month",
+      "expected": "paypal.reporting.search.get",
+      "proxy_pick": "paypal.invoicing.invoices.search-invoices",
+      "proxy_correct": false,
+      "real_pick": "paypal.reporting.balances.get",
+      "real_correct": false,
+      "agree": false
+    },
+    {
+      "id": "g002",
+      "query": "what's sitting in the account right now",
+      "expected": "paypal.reporting.balances.get",
+      "proxy_pick": "paypal.invoicing.invoices.send",
+      "proxy_correct": false,
+      "real_pick": "paypal.reporting.balances.get",
+      "real_correct": true,
+      "agree": false
+    },
+    {
+      "id": "g003",
+      "query": "Bill jane@acme.com 50 dollars for March consulting",
+      "expected": "paypal.invoicing.invoices.create",
+      "proxy_pick": "paypal.invoicing.invoices.create",
+      "proxy_correct": true,
+      "real_pick": "paypal.invoicing.invoices.create",
+      "real_correct": true,
+      "agree": true
+    },
+    {
+      "id": "g004",
+      "query": "the acme invoice is ready, push it out to them",
+      "expected": "paypal.invoicing.invoices.send",
+      "proxy_pick": "paypal.invoicing.invoices.send",
+      "proxy_correct": true,
+      "real_pick": "paypal.invoicing.invoices.send",
+      "real_correct": true,
+      "agree": true
+    },
+    {
+      "id": "g005",
+      "query": "nudge everyone who hasn't paid the March invoices yet",
+      "expected": "paypal.invoicing.invoices.remind",
+      "proxy_pick": "paypal.invoicing.invoices.remind",
+      "proxy_correct": true,
+      "real_pick": "paypal.invoicing.invoices.remind",
+      "real_correct": true,
+      "agree": true
+    },
+    {
+      "id": "g007",
+      "query": "refund the 1,250.50 capture from the Henderson order",
+      "expected": "paypal.payments.captures.refund",
+      "proxy_pick": "paypal.payments.captures.refund",
+      "proxy_correct": true,
+      "real_pick": "paypal.payments.captures.refund",
+      "real_correct": true,
+      "agree": true
+    },
+    {
+      "id": "g008",
+      "query": "Is there a dispute open from user_123?",
+      "expected": "paypal.disputes.disputes.list",
+      "proxy_pick": "paypal.disputes.disputes.get",
+      "proxy_correct": false,
+      "real_pick": "paypal.disputes.disputes.list",
+      "real_correct": true,
+      "agree": false
+    },
+    {
+      "id": "g009",
+      "query": "set up a 20 dollar monthly plan for premium members",
+      "expected": "paypal.subscriptions.plans.create",
+      "proxy_pick": "paypal.subscriptions.plans.create",
+      "proxy_correct": true,
+      "real_pick": "paypal.subscriptions.plans.create",
+      "real_correct": true,
+      "agree": true
+    },
+    {
+      "id": "g010",
+      "query": "sign maria up for the premium monthly plan",
+      "expected": "paypal.subscriptions.subscriptions.create",
+      "proxy_pick": "paypal.subscriptions.subscriptions.create",
+      "proxy_correct": true,
+      "real_pick": "paypal.subscriptions.subscriptions.create",
+      "real_correct": true,
+      "agree": true
+    },
+    {
+      "id": "g011",
+      "query": "pause the Henderson subscription, don't kill it",
+      "expected": "paypal.subscriptions.subscriptions.suspend",
+      "proxy_pick": "paypal.subscriptions.subscriptions.suspend",
+      "proxy_correct": true,
+      "real_pick": "paypal.subscriptions.subscriptions.suspend",
+      "real_correct": true,
+      "agree": true
+    },
+    {
+      "id": "g012",
+      "query": "invoice acme for 400, then send it and note it in the March report",
+      "expected": "paypal.invoicing.invoices.create",
+      "proxy_pick": "paypal.invoicing.invoices.send",
+      "proxy_correct": false,
+      "real_pick": "paypal.invoicing.invoices.create",
+      "real_correct": true,
+      "agree": false
+    },
+    {
+      "id": "g013",
+      "query": "find everyone who owes us money and remind them",
+      "expected": "paypal.invoicing.invoices.list",
+      "proxy_pick": "paypal.invoicing.invoices.remind",
+      "proxy_correct": false,
+      "real_pick": "paypal.invoicing.invoices.remind",
+      "real_correct": false,
+      "agree": true
+    },
+    {
+      "id": "g014",
+      "query": "how long do buyers have to open a dispute after paying",
+      "expected": "rag_search",
+      "proxy_pick": "paypal.disputes.disputes.list",
+      "proxy_correct": false,
+      "real_pick": "paypal.disputes.disputes.list",
+      "real_correct": false,
+      "agree": true
+    },
+    {
+      "id": "g017",
+      "query": "pull up invoice INV2-3XKL-9QRT-8MMD",
+      "expected": "paypal.invoicing.invoices.get",
+      "proxy_pick": "paypal.invoicing.invoices.remind",
+      "proxy_correct": false,
+      "real_pick": "paypal.invoicing.invoices.get",
+      "real_correct": true,
+      "agree": false
+    },
+    {
+      "id": "g018",
+      "query": "anything more than 90 days overdue",
+      "expected": "paypal.invoicing.invoices.search-invoices",
+      "proxy_pick": "paypal.payments.authorizations.reauthorize",
+      "proxy_correct": false,
+      "real_pick": "paypal.invoicing.invoices.remind",
+      "real_correct": false,
+      "agree": false
+    }
+  ]
+}

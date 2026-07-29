@@ -1,0 +1,146 @@
+[
+  {
+    "id": "docs.checkout_orders_v2.overview",
+    "title": "Orders API Overview",
+    "text": "An order represents a payment between two or more parties. Use the Orders API to create, update, retrieve, authorize, and capture orders.",
+    "source": "checkout_orders_v2"
+  },
+  {
+    "id": "docs.checkout_orders_v2.tag.externalcallback",
+    "title": "Orders: externalcallback",
+    "text": "PayPal will use the callback url defined in the create order request to send merchants shipping address and shipping options data while the buyer is in the PayPal checkout.",
+    "source": "checkout_orders_v2"
+  },
+  {
+    "id": "docs.customer_disputes_v1.overview",
+    "title": "Disputes API Overview",
+    "text": "Occasionally, something goes wrong with a customer's order. To dispute a charge, a customer can create a dispute with PayPal. PayPal merchants, partners, and external developers can use the PayPal Disputes API to manage customer disputes.<blockquote><strong>Note:</strong> In the live environment, merchants cannot create disputes but can only respond to customer-created disputes. However, merchants can create disputes in the sandbox environment. When you create an app, enable Disputes in the App feature options section.</blockquote>A customer can also ask his or her bank or credit card company to dispute and reverse a charge, which is known as a <i>chargeback</i>. For more information, see <a href=\"https://www.paypal.com/us/brc/article/customer-disputes-claims-chargebacks-bank-reversals\">Disputes, claims, chargebacks, and bank reversals</a>.<br/><br/>When a customer disputes a charge, you can use this API to provide evidence that the charge is legitimate. To provide evidence or appeal a dispute, you submit a proof of delivery or proof of refund document or notes, which can include logs.<br/><br/>Normally, an agent at PayPal creates a dispute, updates the dispute status, and settles disputes, but now you can run test cases in the sandbox that complete these operations.<br/><br/><blockquote><strong>Important:</strong> The create, cancel, compute metrics, change reason, and validate eligibility methods are available as a limited-release solution at this time. For more information, reach out to your PayPal account manager.</blockquote><br/>For details, see <a href=\"/docs/integration/direct/customer-disputes/\">Disputes Overview</a> documentation.",
+    "source": "customer_disputes_v1"
+  },
+  {
+    "id": "docs.customer_disputes_v1.tag.disputes",
+    "title": "Disputes: disputes",
+    "text": "Use the `/disputes` resource to list disputes, create disputes, show dispute details, and partially a dispute. Normally, an agent at PayPal creates disputes but now you can run test cases in the sandbox that create disputes.",
+    "source": "customer_disputes_v1"
+  },
+  {
+    "id": "docs.customer_disputes_v1.tag.disputes-actions",
+    "title": "Disputes: disputes-actions",
+    "text": "Use the `/disputes` resource with a dispute ID and an action to:<ul><li>Accept a claim.</li><li>Accept an offer to resolve a dispute.</li><li>Acknowledge the return of an item related to a dispute.</li><li>Settle a dispute.</li><li>Appeal a dispute.</li><li>Cancel a dispute.</li><li>Change the reason for a dispute.</li><li>Deny an offer to resolve dispute.</li><li>Escalate a dispute to a claim.</li><li>Make an offer to resolve a dispute.</li><li>Make an offer to resolve a dispute.</li><li>Provide evidence for a dispute.</li><li>Provide supporting information for dispute.</li><li>In the sandbox, update the dispute status.</li><li>Send a message about a dispute to the other party in the dispute.</li><ul>",
+    "source": "customer_disputes_v1"
+  },
+  {
+    "id": "docs.customer_disputes_v1.tag.referred-disputes",
+    "title": "Disputes: referred-disputes",
+    "text": "Use the `/customer/referred-disputes` resource to create a dispute for a referred case that was created by a partner or marketplace, show details for a referred dispute, by ID, notify referred refunds completed to PayPal, notify PayPal about referred dispute adjudication updates, and determine the dispute eligibility for referred disputes.",
+    "source": "customer_disputes_v1"
+  },
+  {
+    "id": "docs.customer_disputes_v1.tag.validate-referred-dispute-eligibility",
+    "title": "Disputes: validate-referred-dispute-eligibility",
+    "text": "Use the `/validate-referred-dispute-eligibility` resource to determine whether you can create a referred case for a transaction, by encrypted transaction ID.",
+    "source": "customer_disputes_v1"
+  },
+  {
+    "id": "docs.customer_disputes_v1.tag.referred-disputes",
+    "title": "Disputes: referred-disputes",
+    "text": "Use the `/referred-disputes` resource to create a dispute for a referred case that was created by a partner or marketplace, show details for a referred dispute, by ID, notify referred refunds completed to PayPal, notify PayPal about referred dispute adjudication updates, and determine the dispute eligibility for referred disputes.",
+    "source": "customer_disputes_v1"
+  },
+  {
+    "id": "docs.customer_disputes_v1.tag.referred-disputes-actions",
+    "title": "Disputes: referred-disputes-actions",
+    "text": "Use the `/referred-disputes` resource with a dispute ID and an action to notify PayPal about adjudication updates for a referred dispute and notify PayPal about a refund for a referred dispute.",
+    "source": "customer_disputes_v1"
+  },
+  {
+    "id": "docs.customer_disputes_v1.tag.partner-actions",
+    "title": "Disputes: partner-actions",
+    "text": "Use the `/disputes/{id}/partner-actions/` resource to show dispute action details and partially update a dispute action.",
+    "source": "customer_disputes_v1"
+  },
+  {
+    "id": "docs.customer_disputes_v1.tag.return-compensation",
+    "title": "Disputes: return-compensation",
+    "text": "Use the `/disputes/{id}/return-compensation` resource to return the compensation on the dispute provided by PayPal to the customer.",
+    "source": "customer_disputes_v1"
+  },
+  {
+    "id": "docs.invoicing_v2.overview",
+    "title": "Invoices API Overview",
+    "text": "Use the Invoicing API to create, send, and manage invoices. You can also use the API or webhooks to track invoice payments. When you send an invoice to a customer, the invoice moves from draft to payable state. PayPal then emails the customer a link to the invoice on the PayPal website. Customers with a PayPal account can log in and pay the invoice with PayPal. Alternatively, customers can pay as a guest with a debit card or credit card. For more information, see the <a href=\"/docs/invoicing/\">Invoicing Overview</a> and the <a href=\"/docs/invoicing/basic-integration/\">Invoicing Integration Guide</a>.",
+    "source": "invoicing_v2"
+  },
+  {
+    "id": "docs.invoicing_v2.tag.invoices",
+    "title": "Invoices: invoices",
+    "text": "Use the `/invoices` resource to create, update, and send invoices and invoice reminders. To manage invoices, you can also list invoices, show details for invoices, delete draft invoices, and cancel sent invoices. You can also record payments for invoices to mark them as fully or partially paid, or record refunds for invoices to mark them as fully or partially refunded. You can create QR codes for invoices that can be scanned, viewed, and paid by a mobile phone.",
+    "source": "invoicing_v2"
+  },
+  {
+    "id": "docs.invoicing_v2.tag.templates",
+    "title": "Invoices: templates",
+    "text": "Use the `/templates` resource to create, list, show details for, update, and delete invoice templates. Use the `/templates` resource when you create a third-party invoicing application. For instance, a business can create a template with predefined invoice data. Later, the business can select the template to populate the invoice data.<blockquote><strong>Note:</strong> To upload a logo to display on an invoice, you can use the <strong>Template Settings</strong> dashboard to <a href=\"https://www.paypal.com/invoice/settings/templates\">create a template</a>. When you create an invoice, you can use the URI for that logo.</blockquote>",
+    "source": "invoicing_v2"
+  },
+  {
+    "id": "docs.payments_payment_v2.overview",
+    "title": "Payments API Overview",
+    "text": "Call the Payments API to authorize payments, capture authorized payments, refund payments that have already been captured, and show payment information. Use the Payments API in conjunction with the <a href=\"/docs/api/orders/v2/\">Orders API</a>. For more information, see the <a href=\"/docs/checkout/\">PayPal Checkout Overview</a>.",
+    "source": "payments_payment_v2"
+  },
+  {
+    "id": "docs.payments_payment_v2.tag.cancel-payment",
+    "title": "Payments: cancel-payment",
+    "text": "Use the <code>/cancel-payment</code> resource to cancel an order capture or order authorization by <code>PayPal-Request-Id</code>. The merchant triggers the cancel action.",
+    "source": "payments_payment_v2"
+  },
+  {
+    "id": "docs.payments_payment_v2.tag.find-bin-details",
+    "title": "Payments: find-bin-details",
+    "text": "Use the `/find-bin-details` resource to determine PayPal supported networks and retrieve BIN details for given card and payee.",
+    "source": "payments_payment_v2"
+  },
+  {
+    "id": "docs.payments_payouts_batch_v1.overview",
+    "title": "Payouts API Overview",
+    "text": "Use the Payouts API to make payments to multiple PayPal or Venmo recipients. The Payouts API is a fast, convenient way to send commissions, rebates, rewards, and general disbursements. You can send up to 15,000 payments per call. If you integrated the Payouts API before September 1, 2017, you receive transaction reports through <a href=\"/docs/payouts/standard/reports/\">Payouts Reporting</a>. The Payouts API uses the <a href=\"https://tools.ietf.org/html/rfc3339#section-5.6\">ISO 8601 Internet date and time format</a>.",
+    "source": "payments_payouts_batch_v1"
+  },
+  {
+    "id": "docs.payments_payouts_batch_v1.tag.payouts",
+    "title": "Payouts: payouts",
+    "text": "Use the `/payouts` resource to create a batch payout, update the status for a batch payout, show the status of a batch payout with the transaction status and other data for individual payout items, and request approval for a batch payout.",
+    "source": "payments_payouts_batch_v1"
+  },
+  {
+    "id": "docs.reporting_transactions_v1.overview",
+    "title": "Transaction Search API Overview",
+    "text": "Use the Transaction Search API to get the history of transactions for a PayPal account. To use the API on behalf of third parties, you must be part of the PayPal partner network. Reach out to your partner manager for the next steps. To enroll in the partner program, see <a href=\"https://www.paypal.com/my/webapps/mpp/partner-program/global-programs\">Partner with PayPal</a>. For more information about the API, see the <a href=\"/docs/transaction-search/\">Transaction Search API Integration Guide</a>.<blockquote><strong>Note:</strong> To use the API on behalf of third parties, you must be part of the PayPal partner network. Reach out to your partner manager for the next steps. To enroll in the partner program, see <a href=\"https://www.paypal.com/my/webapps/mpp/partner-program/global-programs\">Partner with PayPal</a>.</blockquote>",
+    "source": "reporting_transactions_v1"
+  },
+  {
+    "id": "docs.vault_payment_tokens_v3.overview",
+    "title": "Payment Method Tokens API Overview",
+    "text": "The Payment Method Tokens API saves payment methods so payers don't have to enter details for future transactions. Payers can check out faster or pay without being present after they agree to save a payment method.<br><br>The API associates a payment method with a temporary setup token. Pass the setup token to the API to exchange the setup token for a permanent token.<br><br>The permanent token represents a payment method that's saved to the vault. This token can be used repeatedly for checkout or recurring transactions such as subscriptions.",
+    "source": "vault_payment_tokens_v3"
+  },
+  {
+    "id": "docs.vault_payment_tokens_v3.tag.payment-tokens",
+    "title": "Payment Method Tokens: payment-tokens",
+    "text": "Use the `/vault/payment-tokens` resource to create, retrieve, and delete a payment token that may optionally be associated with a customer.",
+    "source": "vault_payment_tokens_v3"
+  },
+  {
+    "id": "docs.vault_payment_tokens_v3.tag.tokens",
+    "title": "Payment Method Tokens: tokens",
+    "text": "Use the `/vault/tokens` resource to detokenize a vault token to retrieve details associated to the underlying payment source.",
+    "source": "vault_payment_tokens_v3"
+  },
+  {
+    "id": "docs.vault_payment_tokens_v3.tag.tokens-session",
+    "title": "Payment Method Tokens: tokens-session",
+    "text": "Use the `/vault/tokens/{id}/session` resource to read the token session cache and retrieve details associated to the underlying payment source.",
+    "source": "vault_payment_tokens_v3"
+  }
+]
