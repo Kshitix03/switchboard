@@ -48,7 +48,7 @@ on your machine (e.g. by Jaeger), set `PHOENIX_GRPC_PORT`; `cli.py` defaults it 
 
 ## Honesty flags
 
-- **The golden set (`eval/golden_set.jsonl`, 60 queries) is entirely AI-generated (Claude), not
+- **The golden set (`eval/golden_set.jsonl`, 60 queries) is entirely AI-generated, not
   hand-written.** A direct deviation from the PRD's explicit instruction to write it yourself, made
   under real time constraints, disclosed rather than misrepresented — see `DECISIONS.md`'s Phase 3
   section for the full context and the reasoning risk this creates.

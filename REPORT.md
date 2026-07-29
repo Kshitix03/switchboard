@@ -200,7 +200,7 @@ raised, so a dry run can never pause waiting on a human.
 - **Qdrant embedded in-memory, not Docker.** No Docker dependency for a 2-day build; the trade-off
   is the index rebuilds every process start, mitigated by caching embeddings to disk by content hash
   separately from the (ephemeral) collection.
-- **Gemini, not OpenAI/Claude, for the LLM.** A pragmatic, quota-driven choice that turned out to
+- **Gemini, not OpenAI/Anthropic, for the LLM.** A pragmatic, quota-driven choice that turned out to
   cost real time: `gemini-2.5-flash` 404s as "no longer available to new users" despite showing
   quota in the console; the working alias (`gemini-flash-latest`) itself hit its 20 req/day cap
   mid-build and had to be swapped to `gemini-flash-lite-latest`; embedding and generation calls hit
@@ -225,7 +225,7 @@ raised, so a dry run can never pause waiting on a human.
 Named plainly, in the spirit of the PRD's own instruction that a named weakness with a measurement
 attached is worth more than a claim of none:
 
-1. **The golden set is entirely AI-generated (Claude), not hand-written.** A direct, disclosed
+1. **The golden set is entirely AI-generated, not hand-written.** A direct, disclosed
    deviation from the PRD's explicit instruction to write it yourself — the real risk this creates
    (an AI generating both the routing system and its own eval queries can correlate blind spots) is
    named here rather than hidden. What I'd build next: a genuinely hand-written 50–60 query set,
