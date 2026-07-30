@@ -9,6 +9,8 @@ registry/data/tools.json
 registry/data/tools_enriched.json
 registry/data/enrichment_cache.json
 switchboard.sqlite
+switchboard.sqlite-shm
+switchboard.sqlite-wal
 traces.jsonl
 constraints_tmp.txt
 registry/data/padding_specs/

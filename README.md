@@ -28,7 +28,9 @@ measured directly, with zero LLM calls needed to produce this chart.
 Full table, chart, methodology, and named limitations (including a real finding that the untuned
 reranker sometimes hurts recall vs. dense-only alone) are in `docs/RESULTS.md`. The full report —
 architecture, state management, error handling, framework trade-offs, and limitations — is in
-`REPORT.md`. The complete build-by-build decision log is in `DECISIONS.md`.
+`REPORT.md`, with a condensed 5-page version at
+[`docs/Switchboard_Report.pdf`](docs/Switchboard_Report.pdf). The complete build-by-build decision
+log is in `DECISIONS.md`.
 
 ## Run it
 
